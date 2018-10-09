@@ -32,6 +32,8 @@ export default ({
 }: Args): DragImpact => {
   const axis: Axis = destination.axis;
 
+  console.log("axis", axis)
+
   // We need to know what point to use to compare to the other
   // draggables in the list.
   // To do this we need to consider any displacement caused by
@@ -41,6 +43,8 @@ export default ({
     destination,
     pageBorderBoxCenter,
   );
+
+  console.log('currentCenter', currentCenter)
 
   const displaced: Displacement[] = insideDestination
     .filter(
