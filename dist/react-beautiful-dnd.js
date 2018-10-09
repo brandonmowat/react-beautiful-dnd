@@ -2627,7 +2627,9 @@
 	      previousImpact = _ref.previousImpact,
 	      viewport = _ref.viewport;
 	  var axis = destination.axis;
+	  console.log("axis", axis);
 	  var currentCenter = withDroppableScroll(destination, pageBorderBoxCenter);
+	  console.log('currentCenter', currentCenter);
 	  var displaced = insideDestination.filter(function (child) {
 	    var threshold = child.page.borderBox[axis.end];
 	    return threshold > currentCenter[axis.line];
